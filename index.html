@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Parvis</title>
+<meta name="author" content="maiku">
+<meta name="keywords" content="Parvis, Javascript parse visualizer, Javascript tree viewer">
+<meta name="description" content="HTML/CSS/Javascript parse visualizer - converts nested arrays">
+<style>
+body {
+	font-family: sans-serif;
+	margin: 0 10%;
+}
+div.i {
+	border: 2px solid red;
+	padding: 0.5em;
+}
+</style>
+</head>
+
+<body>
+<h1>Parvis</h1>
+<p><b>A <u>par</u>se <u>vis</u>ualizer.</b></p>
+<p>A generalized tree-viewer Javascript tool capable of rendering nested arrays into html.  The presentation is manipulated mostly using CSS, with some Javascript hooks and others planned for future versions.</p>
+<div class="i">
+<img src="sc.png" alt="tree-viewer tool screen shot" border=0>
+</div>
+<p>Arrays (called trees) must be in the form:</p>
+<pre>
+tree := `[` string `,` string `]` | `[` string? tree+ `]`
+</pre>
+<p>Note that empty arrays and objects other than arrays and strings are currently not supported.  The first string is understood to represent a production rule symbol, and the second a terminal symbol.</p>
+<p>You can use JSON.parse() to turn suitable strings into arrays for input purposes, as is done in the tool.</p>
+
+<h2>Tools and examples</h2>
+
+<ul>
+<li><b><a href="./tools/tree-viewer.html">Tree-viewer</a>:</b> a tool can be used to view any nested array </li>
+<li><b><a href="./examples/lojban/jboparvis.html">Jboparvis</a>:</b> A Camxes-based Lojban parse-visualizer.</li>
+</ul>
+
+<h2>Documentation</h2>
+
+<p>Coming in v 0.2</p>
+
+<p>In the meantime, if you are interested, I suggest you join the <a href="https://discord.gg/7jJJ4h7">Logical Languages Lodge server on Discord</a> and follow the <a href="https://discord.com/channels/686703638030188631/1210035213602791445">Parvis thread</a> found there.</p>
+
+</body>
+</html>
