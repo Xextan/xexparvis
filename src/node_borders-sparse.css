@@ -1,0 +1,38 @@
+/***** all_nodes *****/
+
+.pv-container.all_nodes div.et-root,
+.pv-container.all_nodes div.et-child.et-sc-m {
+	border-width: 1px;
+	padding: var(--v-buffer) var(--h-buffer);
+	margin: var(--v-buffer) var(--h-buffer);
+}
+
+
+/***** pruned_nodes *****/
+
+.pv-container.pruned_nodes div.et-cc-0,
+.pv-container.pruned_nodes div.et-cc-m {
+	border-width: 1px;
+	padding: var(--v-buffer) var(--h-buffer);
+	margin: var(--v-buffer) var(--h-buffer);
+}
+div.pv-container.pruned_nodes div.et-cc-1 > p {
+	display: none;
+}
+
+
+/***** minimal_nodes *****/
+
+.pv-container.minimal_nodes div.et-cc-0,
+.pv-container.minimal_nodes div.et-cc_nsp-m {
+	border-width: 1px;
+	padding: var(--v-buffer) var(--h-buffer);
+	margin: var(--v-buffer) var(--h-buffer);
+}
+div.pv-container.minimal_nodes div.et-cc-1 > p,
+div.pv-container.minimal_nodes div.et-cc_nsp-1 > p {
+	display: none;
+}
+
+
+/***** eof *****/

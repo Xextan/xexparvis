@@ -1,0 +1,242 @@
+/***** general layout *****/
+
+body {
+	font-family: sans-serif;
+	margin: 0 1rem;
+}
+#source {
+	font-family: sans-serif;
+	width: calc( 100% - 1.0em );
+	padding: 0.5em;
+}
+#error {
+	font-family: monospace;
+	white-space: pre-wrap;
+	width: calc( 100% - 1.0em );
+	padding: 0.5em;
+	border: 1px solid #999;
+	margin: 0 0 1rem;
+	background: #fcc;
+	height: 1em;
+}
+#error:empty {
+	background: inherit;
+}
+#error::before {
+	content: '> ';
+}
+#raw_string {
+	font-family: monospace;
+	white-space: pre-wrap;
+} 
+#indented_string {
+	font-family: monospace;
+	white-space: pre;
+} 
+
+
+/***** general pv styles *****/
+
+.pv-container div {
+	border: 0px solid grey;
+}
+.pv-container div.et-cc-1 > p.dv-source,
+.pv-container div.et-cc-1 > p.dv-gloss {
+	display: none;
+}
+p.dv-source {
+	font-weight: bold;
+}
+p.dv-gloss {
+	display: none;
+	font-style: italic;
+}
+
+
+/***** all_nodes *****/
+
+.pv-top_down .pv-container#all_nodes div.et-sc-m {
+	border-width: 1px 1px 0;
+	padding: 0 var(--h-buffer) 0;
+	margin: 0 var(--h-buffer) 0;
+}
+.pv-bottom_up .pv-container#all_nodes div.et-sc-m {
+	border-width: 0 1px 1px;
+	padding: 0 var(--h-buffer) 0;
+	margin: 0 var(--h-buffer) 0;
+}
+.pv-container#all_nodes div.et-root {
+	padding: 0 var(--h-buffer);
+	border-width: 1px;
+}
+
+
+/***** pruned_nodes *****/
+
+.pv-top_down .pv-container#pruned_nodes div.et-cc-0,
+.pv-top_down .pv-container#pruned_nodes div.et-cc-m {
+	border-width: 1px 1px 0;
+	padding: 0 var(--h-buffer) 0;
+	margin: 0 var(--h-buffer) 0;
+}
+.pv-bottom_up .pv-container#pruned_nodes div.et-cc-0,
+.pv-bottom_up .pv-container#pruned_nodes div.et-cc-m {
+	border-width: 0 1px 1px;
+	padding: 0 var(--h-buffer) 0;
+	margin: 0 var(--h-buffer) 0;
+}
+.pv-top_down .pv-container#pruned_nodes div.et-root {
+	border-bottom-width: 1px;
+}
+.pv-bottom_up .pv-container#pruned_nodes div.et-root {
+	border-top-width: 1px;
+}
+div.pv-container#pruned_nodes div.et-cc-1 > p {
+	display: none;
+}
+
+
+/***** minimal_nodes *****/
+
+.pv-top_down .pv-container#minimal_nodes div.et-cc-0,
+.pv-top_down .pv-container#minimal_nodes div.et-cc_nsp-m {
+	border-width: 1px 1px 0;
+	padding: 0 var(--h-buffer) 0;
+	margin: 0 var(--h-buffer) 0;
+}
+.pv-bottom_up .pv-container#minimal_nodes div.et-cc-0,
+.pv-bottom_up .pv-container#minimal_nodes div.et-cc_nsp-m {
+	border-width: 0 1px 1px;
+	padding: 0 var(--h-buffer) 0;
+	margin: 0 var(--h-buffer) 0;
+}
+.pv-top_down .pv-container#minimal_nodes div.et-root {
+	border-bottom-width: 1px;
+}
+.pv-bottom_up .pv-container#minimal_nodes div.et-root {
+	border-top-width: 1px;
+}
+div.pv-container#minimal_nodes div.et-cc-1 > p,
+div.pv-container#minimal_nodes div.et-cc_nsp-1 > p {
+	display: none;
+}
+
+
+/***** hide phon *****/
+
+#tab-content.hide_phon div.rg-phon {
+	display: none;
+}
+
+
+/***** hide morph *****/
+
+#tab-content.hide_morph div.rg-morph,
+#tab-content.hide_morph div.rg-phon {
+	display: none;
+}
+
+
+/***** hide_spaces *****/
+
+#tab-content.hide_spaces div.sd-sp-1 {
+	display: none;
+}
+
+
+/***** turn on word and important rule-symbol-groups *****/
+
+.pv-top_down .pv-container div.rg-word,
+.pv-top_down .pv-container div.rg-word > div.rg-phon.et-cc-m {
+	border-width: 1px 1px 0;
+	padding: 0 var(--h-buffer) 0;
+	margin: 0 var(--h-buffer) 0;
+}
+.pv-bottom_up .pv-container div.rg-word,
+.pv-bottom_up .pv-container div.rg-word > div.rg-phon.et-cc-m {
+	border-width: 0 1px 1px;
+	padding: 0 var(--h-buffer) 0;
+	margin: 0 var(--h-buffer) 0;
+}
+.pv-container div.rg-word > p.dv-rule,
+.pv-container div.rg-word > p.dv-gloss:not(:empty),
+.pv-container div.rg-word > p.dv-source,
+.pv-container div.rg-important > p.dv-rule {
+	display: block !important;
+}
+
+
+/***** Extra colors and <p>-borders *****/
+
+.pv-container div {
+}
+.pv-container div.rg-morph {
+	background-color: gold;
+	color: black;
+}
+.pv-container div.rg-phon,
+.pv-container div.sd-sp-1 {
+	background-color: lightyellow;
+	color: black;
+}
+.pv-container div.rg-word {
+	background-color: lightcyan;
+	color: black;
+}
+.pv-container div.r-selbri > p.dv-rule {
+	background-color: lightgreen;
+	color: black;
+}
+.pv-container div.r-sumti > p.dv-rule {
+	background-color: blue;
+	color: white;
+}
+.pv-container div.r-sentence > p.dv-rule {
+	color: white;
+	background-color: darkcyan;
+}
+.pv-container div.rg-important > p.dv-rule {
+	border: 1px solid grey;
+}
+
+
+/***** tab stuff *****/
+
+#tab-buttons {
+	overflow: hidden;
+	border: 1px solid #999;
+	width: 100%;
+}
+#tab-buttons button {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 0.5rem 1rem;
+}
+#tab-buttons button:hover {
+	background-color: #ddd;
+}
+#tab-buttons button.active {
+	background-color: #ccc;
+}
+
+#tab-content {
+	width: 100%;
+	border-top: none;
+}
+#tab-content div.string-data {
+	width: calc( 100% - 1.0em );
+	padding: 0.5em;
+	border: 1px solid #ccc;
+	border-top: 0;
+	margin-bottom: 0.5em;
+	display: none;
+} 
+#tab-content div.pv-container div.et-root {
+	margin: 0.5rem 0 !important;
+}
+
+
+/***** eof *****/

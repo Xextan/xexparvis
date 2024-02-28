@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Tree viewer (Parvis)</title>
+<!-- Parvis stuff -->
+<script type="text/javascript" src="../src/parvis.js"></script>
+<link rel="stylesheet" href="../src/0-base.css" />
+<link rel="stylesheet" href="../src/node_borders-planted.css" id="box_css"/>
+<link rel="stylesheet" href="tree-viewer.css" />
+</head>
+<body>
+
+<p><b>Input.</b> Enter your tree or click a button:
+<button type="button" onclick="sample1()">poem line</button>
+<button type="button" onclick="sample2()">mi mlatu</button>
+</p>
+<textarea id="source" rows="5" onkeyup="refresh_output();"></textarea>
+
+<p><b>Output.</b>
+<select name="select_box_css" id="select_box_css" onchange="select_box_css()">
+	<option value="">Box borders:</option>
+	<option value="none">none</option>
+	<option value="every">every node</option>
+	<option value="sparse">key nodes</option>
+	<option value="planted">key nodes planted</option>
+</select>
+<select name="filter_nodes" id="filter_nodes" onchange="refresh_output_class()">
+	<option value="all_nodes">Choose node filter:</option>
+	<option value="all_nodes">Show all nodes</option>
+	<option value="pruned_nodes">Prune node towers</option>
+	<option value="minimal_nodes">Minimize nodes</option>
+</select>
+<button type="button" onclick="flip_tree()">Flip tree</button>
+<input type="checkbox" id="hide_redundant_source" role="button" onclick="refresh_output_class()"><label for="hide_redundant_source">Hide redundant source text</label>
+<input type="checkbox" id="hide_spaces" role="button" onclick="refresh_output_class()"><label for="hide_spaces">Hide whitespace source text</label>
+<input type="checkbox" id="insert_spaces" role="button" onclick="refresh_output()"><label for="insert_spaces">Insert spaces between source text values</label>
+</p>
+<div id="output" class="pv-container all"></div>
+
+<script src="tree-viewer.js"></script>
+
+</body>
+</html>
+

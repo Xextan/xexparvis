@@ -1,0 +1,49 @@
+/***** general layout *****/
+
+body {
+	font-family: sans-serif;
+	margin: 0 10%;
+}
+body > p {
+	line-height: 150%;
+}
+#source {
+	padding: 0.5em;
+	width: calc( 100% - 1em);
+}
+#output {
+	width: 100%;
+}
+.error {
+	font-family: monospace;
+	white-space: pre-wrap;
+	background: #fcc;
+}
+.pv-container div {
+	border: 0px solid grey;
+}
+p.dv-source {
+}
+p.dv-gloss {
+	display: none;
+	font-style: italic;
+}
+
+
+/***** Hide redundant source *****/
+/* 'et-cc-1' means "edge type / child-count = 1" */
+
+.pv-container.hide_redundant_source div.et-cc-1 > p.dv-source,
+.pv-container.hide_redundant_source div.et-cc-1 > p.dv-gloss {
+	display: none;
+}
+
+
+/***** Hide spaces *****/
+
+.pv-container.hide_spaces div.sd-sp-1 {
+	display: none;
+}
+
+
+/***** eof *****/

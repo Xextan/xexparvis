@@ -1,0 +1,19 @@
+/***** all_nodes *****/
+
+
+/***** pruned_nodes *****/
+
+div.pv-container.pruned_nodes div.et-cc-1 > p {
+	display: none;
+}
+
+
+/***** minimal_nodes *****/
+
+div.pv-container.minimal_nodes div.et-cc-1 > p,
+div.pv-container.minimal_nodes div.et-cc_nsp-1 > p {
+	display: none;
+}
+
+
+/***** eof *****/

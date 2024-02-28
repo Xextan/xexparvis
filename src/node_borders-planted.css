@@ -1,0 +1,84 @@
+/***** all_nodes *****/
+
+.pv-top_down.pv-container.all_nodes div.et-sc-m,
+.pv-top_down .pv-container.all_nodes div.et-sc-m {
+	border-width: 1px 1px 0;
+	padding: 0 var(--h-buffer) 0;
+	margin: 0 var(--h-buffer) 0;
+}
+.pv-bottom_up.pv-container.all_nodes div.et-sc-m,
+.pv-bottom_up .pv-container.all_nodes div.et-sc-m {
+	border-width: 0 1px 1px;
+	padding: 0 var(--h-buffer) 0;
+	margin: 0 var(--h-buffer) 0;
+}
+.pv-container.all_nodes div.et-root {
+	padding: 0 var(--h-buffer);
+	border-width: 1px;
+}
+
+
+/***** pruned_nodes *****/
+
+.pv-top_down.pv-container.pruned_nodes div.et-cc-0,
+.pv-top_down.pv-container.pruned_nodes div.et-cc-m,
+.pv-top_down .pv-container.pruned_nodes div.et-cc-0,
+.pv-top_down .pv-container.pruned_nodes div.et-cc-m {
+	border-width: 1px 1px 0;
+	padding: 0 var(--h-buffer) 0;
+	margin: 0 var(--h-buffer) 0;
+}
+.pv-bottom_up.pv-container.pruned_nodes div.et-cc-0,
+.pv-bottom_up.pv-container.pruned_nodes div.et-cc-m,
+.pv-bottom_up .pv-container.pruned_nodes div.et-cc-0,
+.pv-bottom_up .pv-container.pruned_nodes div.et-cc-m {
+	border-width: 0 1px 1px;
+	padding: 0 var(--h-buffer) 0;
+	margin: 0 var(--h-buffer) 0;
+}
+.pv-top_down.pv-container.pruned_nodes div.et-root,
+.pv-top_down .pv-container.pruned_nodes div.et-root {
+	border-bottom-width: 1px;
+}
+.pv-bottom_up.pv-container.pruned_nodes div.et-root,
+.pv-bottom_up .pv-container.pruned_nodes div.et-root {
+	border-top-width: 1px;
+}
+.pv-container.pruned_nodes div.et-cc-1 > p {
+	display: none;
+}
+
+
+/***** minimal_nodes *****/
+
+.pv-top_down.pv-container.minimal_nodes div.et-cc-0,
+.pv-top_down.pv-container.minimal_nodes div.et-cc_nsp-m,
+.pv-top_down .pv-container.minimal_nodes div.et-cc-0,
+.pv-top_down .pv-container.minimal_nodes div.et-cc_nsp-m {
+	border-width: 1px 1px 0;
+	padding: 0 var(--h-buffer) 0;
+	margin: 0 var(--h-buffer) 0;
+}
+.pv-bottom_up.pv-container.minimal_nodes div.et-cc-0,
+.pv-bottom_up.pv-container.minimal_nodes div.et-cc_nsp-m,
+.pv-bottom_up .pv-container.minimal_nodes div.et-cc-0,
+.pv-bottom_up .pv-container.minimal_nodes div.et-cc_nsp-m {
+	border-width: 0 1px 1px;
+	padding: 0 var(--h-buffer) 0;
+	margin: 0 var(--h-buffer) 0;
+}
+.pv-top_down.pv-container.minimal_nodes div.et-root,
+.pv-top_down .pv-container.minimal_nodes div.et-root {
+	border-bottom-width: 1px;
+}
+.pv-bottom_up.pv-container.minimal_nodes div.et-root,
+.pv-bottom_up .pv-container.minimal_nodes div.et-root {
+	border-top-width: 1px;
+}
+.pv-container.minimal_nodes div.et-cc-1 > p,
+.pv-container.minimal_nodes div.et-cc_nsp-1 > p {
+	display: none;
+}
+
+
+/***** eof *****/
