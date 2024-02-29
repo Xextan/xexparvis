@@ -35727,7 +35727,7 @@ var camxes = (function() {
     }
 
     function peg$parsem() {
-      var s0, s1, s2, s3, s4, s5, s6, s7, s8, s9;
+      var s0, s1, s2, s3, s4, s5, s6, s7, s8;
 
       var key    = peg$currPos * 777 + 626,
           cached = peg$cache[key];
@@ -35798,23 +35798,8 @@ var camxes = (function() {
                   s7 = peg$c0;
                 }
                 if (s7 !== peg$FAILED) {
-                  s8 = peg$currPos;
-                  peg$silentFails++;
-                  s9 = peg$parses();
-                  peg$silentFails--;
-                  if (s9 === peg$FAILED) {
-                    s8 = peg$c3;
-                  } else {
-                    peg$currPos = s8;
-                    s8 = peg$c0;
-                  }
-                  if (s8 !== peg$FAILED) {
-                    s2 = [s2, s3, s4, s5, s6, s7, s8];
-                    s1 = s2;
-                  } else {
-                    peg$currPos = s1;
-                    s1 = peg$c0;
-                  }
+                  s2 = [s2, s3, s4, s5, s6, s7];
+                  s1 = s2;
                 } else {
                   peg$currPos = s1;
                   s1 = peg$c0;
@@ -61048,11 +61033,11 @@ var camxes = (function() {
 })()
 
 if (typeof module !== 'undefined') {
-	module.exports = camxes;
-	if (typeof process !== 'undefined' && require !== 'undefined' && require.main === module) {
-		var input = process.argv[2];
-		if (Object.prototype.toString.call(input) === '[object String]')
-			console.log(JSON.stringify(camxes.parse(input)));
-	}
+    module.exports = camxes;
+    if (typeof process !== 'undefined' && require !== 'undefined' && require.main === module) {
+      var input = process.argv[2];
+      if (Object.prototype.toString.call(input) === '[object String]')
+        console.log(JSON.stringify(camxes.parse(input)));
+    }
 }
 
