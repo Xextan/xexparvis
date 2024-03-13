@@ -67,7 +67,7 @@ function Parvis () {
 
 	/* if these fixes are disabled, an error is thrown if the condition is encountered */
 	this.fixOneStringArrays = true; // missing element in "one-string arrays" are interpreted as implicit empty terminal '' (and NOT as an unnamed node, which is though a possibility: TODO).  Default: true.
-	this.fixBareStringTrees = ''; // when trees are bare strings, string value X here (e.g. '$') indicates missing rulename is X and text=tree.  value=true indicates rulename=tree and text=''.  False throws error
+	this.fixBareStringTrees = true; // when trees are bare strings, nonempty string value X here (e.g. '$') indicates missing rulename is X and text=tree.  value=true indicates rulename=tree and text=''.  False/empty throws error
 	this.fixMissingRule = true; // when trees are arrays with no node rule-symbol, build one from children. Default: true.
 	//this.unnamedNodeDefault = '?'; // use this when fixing the unnamed nodes of trees with no children.  Default: '?' (not sure if needed)
 	//this.ignoreEmptyArrays = false; // this nonsense should not exist (TODO if needed)
@@ -93,7 +93,7 @@ Parvis.prototype.toHtmlR = function ( tree, depth, siblingCount ) {
 
 	if (! (tree instanceof Array) ) {
 		if ( ! isString (tree) ) throw new SyntaxError('invalid tree (neither string nor array)');
-		if ( this.fixBareStringTrees === false ) throw new SyntaxError('invalid tree (bare string)');
+		if ( ! this.fixBareStringTrees ) throw new SyntaxError('invalid tree (bare string)');
 		if ( isString( this.fixBareStringTrees ) ) {
 			// treat string as terminal
 			r = this.fixBareStringTrees;
