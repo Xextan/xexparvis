@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Xexparvis</title>
+<!-- Parvis stuff -->
+<script type="text/javascript" src="../../src/parvis.js"></script>
+<link rel="stylesheet" href="../../src/0-base.css" />
+<link rel="stylesheet" href="xexparvis.css" />
+<script src="parser.js"></script>
+<script src="vlabuk.js"></script>
+</head>
+<body>
+<p><b style="font-size:200%;"><code>Xexparvis</code></b></p>
+
+<p><b>Source.</b> Enter some Xextan.
+&nbsp; <button type="button" onclick="clear_input()">Clear</button>
+&nbsp; <button type="button" onclick="sample1()">Sample 1</button>
+&nbsp; <button type="button" onclick="sample2()">Sample 2</button>
+&nbsp; <button type="button" onclick="sample3()">Sample 3</button>
+</p>
+<textarea id="source" rows="5" onkeyup="refresh_output();"></textarea>
+
+<p><b>Result.</b>
+<input type="checkbox" id="show_phon" role="button" onclick="refresh_html()"><label for="show_phon">Show phonology</label>
+<input type="checkbox" id="show_morph" role="button" onclick="refresh_html()"><label for="show_morph">Show morphology</label>
+<input type="checkbox" id="show_spaces" role="button" onclick="refresh_html()"><label for="show_spaces">Show spaces</label>
+ &nbsp; <button type="button" onclick="flip_tree()">Flip tree</button>
+ &nbsp; <button type="button" onclick="toggle_error()" id="toggle_error">Show error</button>
+</p>
+<div id="error" style="display:none;"></div>
+<div id="tab-buttons">
+<button onclick="tab_click(this)">Raw string</button>
+<button onclick="tab_click(this)">Indented string</button>
+<button onclick="tab_click(this)">All nodes</button>
+<button onclick="tab_click(this)">Pruned nodes</button>
+<button onclick="tab_click(this)">Minimal nodes</button>
+</div>
+
+<!-- Tab content -->
+<div id="tab-content">
+<div class="string-data" id="raw_string"></div>
+<div class="string-data" id="indented_string"></div>
+<div class="pv-container" id="all_nodes"></div>
+<div class="pv-container" id="pruned_nodes"></div>
+<div class="pv-container" id="minimal_nodes"></div>
+</div>
+
+<script src="xexparvis.js"></script>
+
+</body>
+</html>
