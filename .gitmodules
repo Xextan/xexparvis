@@ -1,0 +1,6 @@
+[submodule "examples/xextan/parserdata"]
+	path = examples/xextan/parserdata
+	url = https://github.com/Xextan/parser
+[submodule "examples/xextan/vlabukdata"]
+	path = examples/xextan/vlabukdata
+	url = https://github.com/Xextan/vlabuk
