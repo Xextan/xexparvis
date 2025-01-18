@@ -100,7 +100,7 @@ function error () {
 }
 
 function deaccent(s) {
-                return s.replace(/[‘’]/g, "'").replace(/[áãâ]/g, "a").replace(/[éẽê]/g, "e").replace(/[íĩî]/g, "i").replace(/[óõô]/g, "o").replace(/[úũû]/g, "u").replace(/[ýỹŷ]/g, "y");
+                return s.replace(/[‘’]/g, "'").replace(/[áàãâ]/g, "a").replace(/[éèẽê]/g, "e").replace(/[íìĩî]/g, "i").replace(/[óòõô]/g, "o").replace(/[úùũû]/g, "u").replace(/[ýỹŷ]/g, "y");
             }
 			
 function capitalize(val) {
