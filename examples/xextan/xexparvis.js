@@ -10,9 +10,9 @@ parvis.sourceToViewMap.set( '', '∅' ).set( '_', '␣' ).set( ' ', '␣' );
 parvis.viewToSourceMap.set( '∅', ' ' ).set( '␣', ' ' );
 parvis.whitespaceRegex = /^[\s._]*$/;
 parvis.cnRuleGroupMap.set( 'phon', 'freeword_start,CL,FWCL,CL3,D,HD,FWC,FWF,ANY,ANY_C,ANY_V,ANY_H,C,voiced,unvoiced,sibilant,fricative,stop,sonorant,V,V_H,V_H,V_HN,V_L,IG,UG,GV,IG_H,UG_H,GV_H,F,GL,p,b,t,d,k,g,f,v,s,z,x,q,l,n,j,w,m,r,h,a,e,i,o,u,y,a_H,e_H,i_H,o_H,u_H,y_H,a_HN,e_HN,i_HN,o_HN,u_HN,y_HN,a_L,e_L,i_L,o_L,u_L,y_L,punctuation,glottal'.split(',') );
-parvis.cnRuleGroupMap.set( 'morph', 'root,root_H,root_L,compound,compound_H,compound_L,freeword,classic_freeword,suffix,adverb_suffix,numeral,possessive,quantifier'.split(',') );
-parvis.cnRuleGroupMap.set( 'word', 'verb,verb_L,root,root_H,root_L,discursive_illocution,modal_illocution,pronoun,transmogrifier,preposition_SS,preposition_LS,determiner_SS,determiner_LS,tag_SS,tag_LS,binder_SS,binder_LS,modifier,verb_modifier,adverb,connective,quoter,operator,onomatopoeia,suffix,SS_terminator,LS_terminator,DS_terminator,ALL_terminator'.split(',') );
-parvis.cnRuleGroupMap.set( 'important', 'sentence,noun_term,predicate_term,verbal'.split(',') );
+parvis.cnRuleGroupMap.set( 'morph', 'root,root_H,root_L,compound,compound_H,compound_L,freeword,classic_freeword,suffix,adverb,adverb_suffix,adverb_compound,numeral,possessive,quantifier'.split(',') );
+parvis.cnRuleGroupMap.set( 'word', 'verb,verb_L,root,root_H,root_L,discursive_illocution,modal_illocution,pronoun,adverbial,adverb,adverb_suffix,transmogrifier,preposition_SS,preposition_LS,determiner_SS,determiner_LS,tag_SS,tag_LS,binder_SS,binder_LS,modifier,verb_modifier,connective,quoter,operator,onomatopoeia,suffix,SS_terminator,LS_terminator,DS_terminator,ALL_terminator'.split(',') );
+parvis.cnRuleGroupMap.set( 'important', 'sentence,clause,noun_term,predicate_term,verbal'.split(',') );
 parvis.propagatedRuleGroupArray.push ( 'phon', 'morph' );
 parvis.getGloss = function ( source ) {
 	if (shortDescriptions [source] != undefined) {
