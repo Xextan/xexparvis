@@ -72,7 +72,7 @@ function clear_input() {
 	set_input( `` );
 }
 function sample1() {
-	set_input( `xoi fol! u gevlá tu tul lu Xéxpárvísy.` );
+	set_input( `xoi fol! u gevlá tu tul lou ~Xexparvis~` );
 }
 function sample2() {
 	set_input( `xel de únági o nia xutvak konfli.` );
